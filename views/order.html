@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/order.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid">
+        <div class="header">
+            <i class="fa-solid fa-chevron-left"></i>
+            <p class="header__des">Thức ăn nhanh</p>
+        </div>
+        <div class="container">
+            <div class="container__menu">
+                <div class="container__menu-titlle container__menu-titlle-check">Coffee</div>
+                <div class="container__menu-titlle">Hải sản</div>
+                <div class="container__menu-titlle">Lẩu</div>
+                <div class="container__menu-titlle">Bia</div>
+                <div class="container__menu-titlle">Chay</div>
+            </div>
+            <div class="container__order">
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+                <div class="container__order-group">
+                    <img class="container__order-icon" alt="" src="../assets/img/order/bunbo.png"/>
+                    <div class="c-hi-alaska">Cá Hồi Alaska siêu tươi</div>
+                    <div class="price">290.000đ</div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="navigation__btn">
+                <a href="../views/home.html">
+                    <img class="home-roof-icon" alt="" src="../assets/img/function/homeroof__order.svg" />
+                    <div class="navigation__des">Trang chủ</div>
+                </a>
+            </div>
+            <div class="navigation__btn">
+                <img class="home-roof-icon" alt="" src="../assets/img/function/foodtray__order.svg" />
+                <div class="navigation__des-orange">Đặt hàng</div>
+            </div>
+            <div class="navigation__btn">
+                <img class="icon-cart" alt="" src="../assets/img/function/-icon-cart.svg" />
+                <div class="navigation__des">Giỏ hàng</div>
+            </div>
+            <div class="navigation__btn">
+                <img class="icon" alt="" src="../assets/img/function/icon.svg" />
+                <div class="navigation__des">Lịch sử</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuTitlles = document.querySelectorAll('.container__menu-titlle')
+        for(let menuTitlle of menuTitlles) {
+            menuTitlle.addEventListener('click', (event) => {
+            menuTitlle.classList.contains('container__menu-titlle-check') ?
+            event.preventDefault() : menuTitlles.forEach(menuTitlle => {
+                menuTitlle.classList.remove('container__menu-titlle-check')
+            })
+            menuTitlle.classList.add('container__menu-titlle-check')
+            })
+            
+        }
+
+        // menuTitles.forEach(title => {
+        // title.addEventListener('click', () => {
+        //     if (title.classList.contains('container__menu-titlle-check')) {
+        //     title.classList.remove('container__menu-titlle-check');
+        //     } else {
+        //     menuTitles.forEach(title => {
+        //         title.classList.remove('container__menu-titlle-check');
+        //     });
+        //     title.classList.add('container__menu-titlle-check');
+        //     }
+        // });
+        // });
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* Các giá trị mặc định cần có */
+:root {
+    --white-color: #fff;
+    --black-color: #ddd;
+    --text-color: #333;
+    --primary-color: #EE4D2D;
+    --header-height: 120px;
+    --navbar-height: 34px;
+}
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62,5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    max-width: 549px;
+    width: 100%;
+    margin: 0 auto; /* căn giữa */
+}
+/* kích thước màn hình >1200 thì kích thước grid là 1200*/
+/* nếu <1200 thì max-width thì giảm kích thước = màn hình */
+.grid__full_width {
+    width: 100%;
+}
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+.header__des {
+    position: absolute;
+    font-size: 0.8rem;
+    left: calc(50% - 37px);
+    letter-spacing: -0.18px;
+    font-weight: 600;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

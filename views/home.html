@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="grid">
+        <!-- Header -->
+        <div class="header">
+            <div class="header__noLogin">
+                <div class="header__avatar"></div>
+                <img src="../assets/img/logo/logo.png" alt="" class="header__logo">
+            </div>
+        </div>
+
+        <!-- Container -->
+        <div class="container">
+            <div class="container__imgs">
+                <img src="../assets/img/function/imgContainer.png" alt="" class="container__img">
+            </div>
+            <h3>Chọn quầy</h3>
+            <div class="container__functions">
+                <div class="container__function">
+                    <a href="../views/order.html">
+                        <img src="../assets/img/function/nhahang.png" alt="" class="container__function-img">
+                        <p>Nhà hàng</p>
+                    </a>
+                </div>
+                <div class="container__function">
+                    <a href="../views/order.html">
+                        <img src="../assets/img/function/thucannhanh.png" alt="" class="container__function-img">
+                        <p>Thức ăn nhanh</p>
+                    </a>
+                </div>
+                <div class="container__function">
+                    <a href="../views/order.html">
+                        <img src="../assets/img/function/nuocgiaikhat.png" alt="" class="container__function-img">
+                        <p>Nước giải khát</p>
+                    </a>
+                </div>
+                <div class="container__function">
+                    <a href="../views/order.html">
+                        <img src="../assets/img/function/monnuoc.png" alt="" class="container__function-img">
+                        <p>Món nước</p>
+                    </a>
+                </div>
+                <div class="container__function">
+                    <a href="../views/order.html">
+                        <img src="../assets/img/function/nhahang.png" alt="" class="container__function-img">
+                        <p>Món chay</p>
+                    </a>
+                </div>
+                <div class="container__function">
+                    <a href="../views/order.html">
+                        <img src="../assets/img/function/dacsan.png" alt="" class="container__function-img">
+                        <p>Đặc sản</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="navigation__btn">
+                <img class="home-roof-icon" alt="" src="../assets/img/function/homeroof.svg" />
+                <div class="navigation__des-orange">Trang chủ</div>
+            </div>
+            <div class="navigation__btn">
+                <a href="../views/order.html">
+                    <img class="home-roof-icon" alt="" src="../assets/img/function/foodtray.svg" />
+                    <div class="navigation__des">Đặt hàng</div>
+                </a>
+            </div>
+            <div class="navigation__btn">
+                <img class="icon-cart" alt="" src="../assets/img/function/-icon-cart.svg" />
+                <div class="navigation__des">Giỏ hàng</div>
+            </div>
+            <div class="navigation__btn">
+                <img class="icon" alt="" src="../assets/img/function/icon.svg" />
+                <div class="navigation__des">Lịch sử</div>
+            </div>
+        </div>
+        <!-- Navigation left -->
+        <div class="navigationleftfull">
+            <div class="navigationleft">
+                <div class="navigation__header">
+                    <div class="header__avatar"></div>
+                    <p class="header__user"> Nguyen Sang </p>
+                </div>
+                <div class="navigation__container">
+                    <div class="navigation__container-btn">
+                        <i class="fa-solid fa-user-check"></i>
+                        <p>Thông tin tài khoản</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="navigation__container-btn">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <p>Ngôn ngữ</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="navigation__footer">
+                    <button class="logout">Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+        
+     </div>
+     <script>
+        const fadeIn = document.querySelector('.header__avatar');
+        const navigationLeft = document.querySelector('.navigationleftfull');
+        fadeIn.addEventListener('click', function() {
+            navigationLeft.classList.add('isOpen')
+        })
+        const fadeOut = document.querySelector('.navigationleftfull');
+        fadeOut.addEventListener('click', function(event) {
+            if (!event.target.closest('.navigationleft')) {
+                // Nếu phần tử được bấm không thuộc navbar, ẩn navbar
+                navigationLeft.classList.remove('isOpen');
+            }
+        })
+
+     </script>
+</body>
+</html>
