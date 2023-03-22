@@ -120,6 +120,7 @@
         const fadeIn = document.querySelector('.header__avatar');
         const navigationLeft = document.querySelector('.navigationleftfull');
         fadeIn.addEventListener('click', function() {
+            navigationLeft.style.animation= '';
             navigationLeft.classList.add('isOpen')
         })
         const fadeOut = document.querySelector('.navigationleftfull');
@@ -127,6 +128,7 @@
             if (!event.target.closest('.navigationleft')) {
                 // Nếu phần tử được bấm không thuộc navbar, ẩn navbar
                 navigationLeft.classList.remove('isOpen');
+                navigationLeft.style.animation = 'fadeOut 0.5s ease-out';
             }
         })
 

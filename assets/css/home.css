@@ -169,7 +169,8 @@ h3 {
     border-radius: 10px;
 }
 .isOpen {
-    animation: fadeIn 2s ease-out;
+    animation: fadeIn 0.5s ease-out;
+    transform: translateY(0);
 }
 
 a {
@@ -210,5 +211,14 @@ a {
     {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@keyframes fadeOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
     }
 }
